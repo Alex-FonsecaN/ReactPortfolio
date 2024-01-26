@@ -1,0 +1,137 @@
+.center-btn{
+    --border-color:white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: transform 1.4s ease-out;
+    transform-origin: center center;
+    -webkit-transition: transform 1.4s ease-out;
+    -moz-transition: transform 1.4s ease-out;
+    -ms-transition: transform 1.4s ease-out;
+    -o-transition: transform 1.4s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    &::before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      border: 2px solid var(--border-color);
+      border-radius: 50%;
+    }
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    background-color: black; // Posiciona as ondas relativas a este container
+    overflow: hidden;
+    gap:10px;
+  
+    .btn-upper{
+      @extend .center-btn;
+      width: 70px;
+      height: 70px;
+      position: relative;
+  
+      &:before {
+        clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%, 50% 50%);
+      }
+      &:hover{
+  
+          transform: rotate(-30deg);
+           // Valor de rotação para btn-upper    :;
+          -webkit-transform: rotate(-30deg);
+          -moz-transform: rotate(-30deg);
+          -ms-transform: rotate(-30deg);
+          -o-transform: rotate(-30deg);
+  
+        .btn-mid {
+          transform: rotate(55deg);
+           // Valor de rotação para btn-mid    :;
+          -webkit-transform: rotate(55deg);
+          -moz-transform: rotate(55deg);
+          -ms-transform: rotate(55deg);
+          -o-transform: rotate(55deg);
+    }
+        .btn-inf {
+          transform: rotate(-42deg);
+          //Valorderotaçãoparabtn-inf:;
+          -webkit-transform: rotate(-42deg);
+          -moz-transform: rotate(-42deg);
+          -ms-transform: rotate(-42deg);
+          -o-transform: rotate(-42deg);
+    }
+      }
+    }
+  
+    .btn-mid{
+      @extend .center-btn;
+      width: 50px;
+      height: 50px;
+      position: relative;
+    
+      &:before {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 25% 50%);
+      }
+    }
+  
+    .btn-inf {
+      @extend .center-btn;
+      width: 30px;
+      height: 30px;
+  
+      position: relative;
+      &:before {
+        content: '';
+        clip-path: polygon(100% 100%, 0% 100%, 0% 0%, 100% 0%, 50% 50%); 
+      }
+  
+   
+     
+  }
+  
+    .wave {
+      position: absolute;
+      width: 100%; // Tamanho inicial
+      height: 100%; // Tamanho inicial
+      border-radius: 50%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      pointer-events: none;
+      z-index: 1;
+      box-shadow: 0 10px 20px rgba(196, 196, 196, 0.2);
+      background-image: radial-gradient(rgba(34, 34, 34, 0.486),rgba(107, 107, 107, 0.493));
+    }
+  
+    span{
+      color:white;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: 0.4s ease;
+      -webkit-transition: 0.4s ease;
+      -moz-transition: 0.4s ease;
+      -ms-transition: 0.4s ease;
+      -o-transition: 0.4s ease;
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: bold;
+  }
+  
+  }
+  
