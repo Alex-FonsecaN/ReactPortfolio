@@ -1,5 +1,7 @@
 import './App.scss';
 import Intro from './Pages/Intro';
+import Presentation from './Pages/Portfolio/Presentation';
+import { MainContextProvider } from './MainContextProvider';
 
 
 function App() {
@@ -8,7 +10,10 @@ function App() {
  
   return (
   <>
-    <Intro />
+    <MainContextProvider>
+      <Intro />
+      <Presentation />
+    </MainContextProvider>
   </>
   );
 }

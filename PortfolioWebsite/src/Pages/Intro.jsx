@@ -1,8 +1,12 @@
-import {  useRef, useState } from 'react';
+import {  useRef, useState, useContext } from 'react';
 import { gsap } from 'gsap';
 import './Intro.scss';
+import { MainContext } from '../MainContextProvider';
 
-function Intro() {
+const Intro = () => {
+
+  const {publics} = useContext(MainContext);
+  const {setFinishedIntroAnim} = publics;
 
     const wave1Ref = useRef(null);
     const wave2Ref = useRef(null);
@@ -59,15 +63,30 @@ function Intro() {
         //Anima a div principal para sumir
     
         const mainDiv = mainDivRef.current
-
-        gsap.set(mainDiv, {position:"absolute", top:0, left:0, width:"100%", height:"100%"})
     
         gsap.to(mainDiv, {
           opacity:0,
           duration: 4,
           ease: "power1.out"
         })
-      };
+
+        setTimeout(() => {
+          setFinishedIntroAnim(true);
+        }, 500);
+        setTimeout(() => {
+          removeIntroContent();
+        }, 3500)
+
+    };
+
+      const removeIntroContent = () => {
+        const mainDiv = mainDivRef.current;
+        if (mainDiv && mainDiv.parentNode) {
+            mainDiv.parentNode.removeChild(mainDiv);
+        }
+    };
+
+      
 
     return(
         <div className="button-container" ref={mainDivRef}>
