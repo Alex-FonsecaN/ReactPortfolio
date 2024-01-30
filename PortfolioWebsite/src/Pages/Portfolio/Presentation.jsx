@@ -2,6 +2,7 @@ import './Presentation.scss';
 import { useEffect, useRef, useContext } from 'react';
 import {gsap} from 'gsap';
 import { MainContext } from '../../MainContextProvider';
+import { Link } from 'react-scroll';
 
 
 
@@ -46,7 +47,7 @@ function Presentation() {
         };
     
         const randomChar = () => {
-          const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+          const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789&#$!%@";
           return chars.charAt(Math.floor(Math.random() * chars.length));
         };
     
@@ -78,13 +79,15 @@ function Presentation() {
     return(
        <>
         <div id='presentation-main'>
-          {finishedIntroAnim && 
-          <>
-            <h1 ref={h1Ref}></h1>
-            <h6 ref={h6Ref}></h6>
-            <button></button>
-          </>
-          }
+          <div id='presentation-panel'>
+            {finishedIntroAnim && 
+            <>
+              <h1 ref={h1Ref}></h1>
+              <h6 ref={h6Ref}></h6>
+              <Link to="fullstack-main" smooth={true} duration={1000}><i className="fa-solid fa-chevron-down"></i></Link>
+            </>
+            }
+          </div>
             
         </div>
        </>
