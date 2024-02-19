@@ -92,7 +92,7 @@ const Intro = () => {
         <div className="button-container" ref={mainDivRef}>
         <div className='btn-upper' onClick={handleClick} ref={btnUpperRef}>
           <div className='btn-mid' ref={btnMidRef}>
-            <div className='btn-inf' ref={btnInfRef}>
+            <div className='btn-inf' ref={btnInfRef}>A
               <div className="wave" ref={wave1Ref}></div>
               <div className="wave" ref={wave2Ref}></div>
               <div className="wave" ref={wave3Ref}></div>

@@ -84,7 +84,7 @@ function Presentation() {
             <>
               <h1 ref={h1Ref}></h1>
               <h6 ref={h6Ref}></h6>
-              <Link to="fullstack-main" smooth={true} duration={1000}><i className="fa-solid fa-chevron-down"></i></Link>
+              <Link to="fullstack-main" smooth={true} duration={350}><i className="fa-solid fa-chevron-down"></i></Link>
             </>
             }
           </div>
