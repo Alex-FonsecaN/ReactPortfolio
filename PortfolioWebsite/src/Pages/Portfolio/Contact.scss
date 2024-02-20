@@ -19,39 +19,49 @@
     width: 100%;
     height: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     box-sizing: border-box;
     padding: 0% 20% 0% 20%;
     margin-bottom: 40px;
+    gap:100px;
 
-    button{
+    a{
         width: 300px;
         background: none;
         color: white;
         cursor: pointer;
         border: none;
         font-size: 3rem;
-
+        text-decoration: none;
+        &:hover{
+            font-weight: bold;
+        }
         span{
             margin-left: 20px;
             box-sizing: border-box;
         }
     }
     div{
-        max-width: 600px;
+        width: 300px;
         background: none;
         color: white;
         border: none;
         font-size: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
+        i{
+            display: inline;
+        }
         span{
             margin-left: 20px;
             box-sizing: border-box;
         }
     }
 }
-a{
+#footer-link{
     height: 10%;
     width: 100%;
     display: flex;
