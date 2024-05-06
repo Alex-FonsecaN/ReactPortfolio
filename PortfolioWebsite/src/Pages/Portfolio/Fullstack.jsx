@@ -24,7 +24,7 @@ function Fullstack() {
 'Utilizo o Node.js de forma muito complementar ao React, serve todas as funções Back-end através de rotas ou websockets. Ao lado, um exemplo retirado de uma rota de registro de conta',
 'ASP.NET na minha experiência é um framework robusto e eficiente. Se destaca por oferecer recursos de segurança de forma padrão e consegue ter uma ótima estruturação ao utilizar o MVC. Ao lado um exemplo retirado de um sistema protótipo que controla células em uma planilha Google Sheets',
 'O SASS é uma excelente adição ao desenvolvimento deste website, permite criar arquivos semelhantes ao CSS, porém mais organizados e limpos. Permite conectar diversos códigos SASS entre si. Ao lado um exemplo retirado do próprio código fonte desta página',
-'Os Filtros do TikTok, são ferramentas visuais ou interativas para que você possa criar videos e se conectar mais com o seu público, seja um criado independente ou uma empresa',
+'Os Filtros do TikTok, são ferramentas visuais ou interativas para que você possa criar videos e se conectar mais com o seu público, seja um criador independente ou uma empresa',
 'Jogos fazem parte fundamental da minha tragetória, já participei de projetos publicados e tenho paixão pelo desenvolvimento'])
     const [languageIndex, setLanguageIndex] = useState(0);
     const [typingText, setTypingText] = useState('Selecione uma opção acima');
