@@ -1,0 +1,101 @@
+#tiktok-main{
+    background: linear-gradient(45deg,blue,rgb(129, 25, 189) 45%,purple 70%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:10px;
+}
+#tiktok-contact{
+    width: 55%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding:0px 20px 0px 20px;
+    box-sizing: border-box;
+    gap:20px;
+
+    a{
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap:10px;
+        text-decoration: none;
+
+        &:hover{
+            color:rgb(221, 221, 221);
+        }
+    }
+}
+#tiktok-table{
+    width: 55%;
+    height: 55%;
+    border-collapse: collapse;
+
+    thead{
+        background-color: black;
+        tr{
+            height: 45px;
+            :first-child{
+                border-top-left-radius: 10px;
+            }
+            :last-child{
+                border-top-right-radius: 10px;
+            }
+            th{
+                color:white;
+                border:none;
+
+                span{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: left;
+                }
+            }
+        }
+    }
+
+    tbody{
+        tr{
+            :first-child{
+                font-weight: bold;
+                padding-left: 15px;
+            }
+            :last-child{
+                padding-right: 15px;
+            }
+            td{
+
+                box-sizing: border-box;
+                background-color: white;
+            }
+        }
+        :last-child{
+            :first-child{
+                border-bottom-left-radius: 10px;
+            }
+            :last-child{
+                border-bottom-right-radius: 10px;
+            }
+        }
+    }
+    
+}
+
+#tiktok-footer{
+    width: 55%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a{
+        color:rgb(231, 231, 231);
+
+    }
+}
