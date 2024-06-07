@@ -13,9 +13,11 @@ function Fullstack() {
     const {texts} = longVariables;
 
     const [currentText,setCurrentText] = useState(texts[0]);
+    const [selectedIconIndex, setSelectedIconIndex] = useState(0);
 
     const changeText = (index) => {
         setCurrentText(texts[index]);
+        setSelectedIconIndex(index);
     }
     return(
        <>
@@ -25,18 +27,18 @@ function Fullstack() {
                     <div id='fullstack-left'>
                         <div id='fullstack-l-s1'>
                             <div className='icon-parent' onClick={() => changeText(0)}>
-                                <i className="fa-solid fa-user-tie"></i>
+                                <i className={`fa-solid fa-user-tie ${selectedIconIndex === 0 ? 'selected' : ''}`}></i>
                             </div>
                         </div>
                         <div id='fullstack-l-s2'>
                             <div className='icon-parent' onClick={() => changeText(1)}>
-                                <i className="fa-solid fa-laptop-code"></i>
+                                <i className={`fa-solid fa-laptop-code ${selectedIconIndex === 1 ? 'selected' : ''}`}></i>
                             </div>
                             <div className='icon-parent' onClick={() => changeText(2)}>
-                                <i className="fa-solid fa-gamepad"></i>
+                                <i className={`fa-solid fa-gamepad ${selectedIconIndex === 2 ? 'selected' : ''}`}></i>
                             </div>
                             <div className='icon-parent' onClick={() => changeText(3)}>
-                                <i className="fa-regular fa-lightbulb"></i>
+                                <i className={`fa-regular fa-lightbulb ${selectedIconIndex === 3 ? 'selected' : ''}`}></i>
                             </div>
                         </div>
                     </div>

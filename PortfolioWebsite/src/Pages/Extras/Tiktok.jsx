@@ -16,21 +16,21 @@ function TikTok () {
                     <tbody>
                         <tr>
                             <td className='first-td'>Publicado em minha conta</td>
-                            <td>R$25,00</td>
-                            <td>R$55,00</td>
-                            <td>R$100,00</td>
+                            <td>R$30,00</td>
+                            <td>R$60,00</td>
+                            <td>R$105,00</td>
                         </tr>
                         <tr>
                             <td className='first-td'>Envio do projeto</td>
-                            <td>R$45,00</td>
-                            <td>R$80,00</td>
-                            <td>R$155,00</td>
+                            <td>R$50,00</td>
+                            <td>R$85,00</td>
+                            <td>R$160,00</td>
                         </tr>
                         <tr>
                             <td className='first-td'>Publicação em conta cliente</td>
-                            <td>R$55,00</td>
-                            <td>R$95,00</td>
-                            <td>R$185,00</td>
+                            <td>R$60,00</td>
+                            <td>R$100,00</td>
+                            <td>R$190,00</td>
                         </tr>
                     </tbody>
                 </table>

@@ -1,4 +1,5 @@
 import './App.scss';
+import Navbar from './Navigation/Navbar';
 import Intro from './Pages/Intro';
 import Presentation from './Pages/Portfolio/Presentation';
 import Fullstack from './Pages/Portfolio/Fullstack';
@@ -12,12 +13,12 @@ import Game from './Pages/Extras/Game';
 
 function App() {
 
-
  
   return (
   <>
     <Router>
       <MainContextProvider>
+        <Navbar />
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/tiktok" element={<TikTok />} />

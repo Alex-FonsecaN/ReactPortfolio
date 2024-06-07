@@ -2,20 +2,22 @@ import React, { useState, useEffect } from 'react';
 
 function TypingEffect({ text }) {
     const [displayedText, setDisplayedText] = useState('');
+    const [index, setIndex] = useState(0);
 
     useEffect(() => {
-        let index = 0;
-        setDisplayedText(text[index]);
-        const timer = setInterval(() => {
-            setDisplayedText((prev) => prev + text[index]);
-            index++;
-            console.log(text[index]);
-            if (index === text.length -1) {
-                clearInterval(timer);
-            }
-        }, 30);
+        if (index < text.length) {
+            const timer = setTimeout(() => {
+                setDisplayedText((prev) => prev + text[index]);
+                setIndex((prevIndex) => prevIndex + 1);
+            }, 30);
 
-        return () => clearInterval(timer);
+            return () => clearTimeout(timer);
+        }
+    }, [index, text]);
+
+    useEffect(() => {
+        setDisplayedText('');
+        setIndex(0);
     }, [text]);
 
     return <span>{displayedText}</span>;

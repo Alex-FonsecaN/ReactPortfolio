@@ -6,7 +6,7 @@ import { MainContext } from '../MainContextProvider';
 const Intro = () => {
 
   const {publics} = useContext(MainContext);
-  const {setFinishedIntroAnim} = publics;
+  const {setFinishedIntroAnim, showIntroDiv, setShowIntroDiv} = publics;
 
     const wave1Ref = useRef(null);
     const wave2Ref = useRef(null);
@@ -74,33 +74,39 @@ const Intro = () => {
           setFinishedIntroAnim(true);
         }, 500);
         setTimeout(() => {
-          removeIntroContent();
+          setShowIntroDiv(false);
         }, 3500)
 
     };
 
-      const removeIntroContent = () => {
-        const mainDiv = mainDivRef.current;
-        if (mainDiv && mainDiv.parentNode) {
-            mainDiv.parentNode.removeChild(mainDiv);
-        }
-    };
+    //   const removeIntroContent = () => {
+    //     const mainDiv = mainDivRef.current;
+    //     if (mainDiv && mainDiv.parentNode) {
+    //         mainDiv.parentNode.removeChild(mainDiv);
+    //     }
+
+    // };
 
       
 
     return(
-        <div className="button-container" ref={mainDivRef}>
-        <div className='btn-upper' onClick={handleClick} ref={btnUpperRef}>
-          <div className='btn-mid' ref={btnMidRef}>
-            <div className='btn-inf' ref={btnInfRef}>A
-              <div className="wave" ref={wave1Ref}></div>
-              <div className="wave" ref={wave2Ref}></div>
-              <div className="wave" ref={wave3Ref}></div>
+      <>
+      {setShowIntroDiv &&
+          <div className="button-container" ref={mainDivRef}>
+            <div className='btn-upper' onClick={handleClick} ref={btnUpperRef}>
+              <div className='btn-mid' ref={btnMidRef}>
+                <div className='btn-inf' ref={btnInfRef}>A
+                  <div className="wave" ref={wave1Ref}></div>
+                  <div className="wave" ref={wave2Ref}></div>
+                  <div className="wave" ref={wave3Ref}></div>
+                </div>
+              </div>
             </div>
-          </div>
+            <span onClick={handleClick} ref={spanRef}>Iniciar</span>
         </div>
-        <span onClick={handleClick} ref={spanRef}>Iniciar</span>
-    </div>
+}
+      </>
+
     )
 }
 

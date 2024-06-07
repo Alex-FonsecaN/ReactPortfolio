@@ -5,12 +5,9 @@
     box-sizing: border-box;
     scroll-snap-align: start;
     display: flex;
-    border-bottom: 1px solid rgb(238, 238, 238);
-    border-top: 1px solid rgb(238, 238, 238);
 }
 #fullstack-left{
-    flex:1;
-    border-right: 1px solid rgb(201, 201, 201);
+    flex:2;
     box-sizing: border-box;
     padding:30px;
     display: flex;
@@ -34,28 +31,26 @@
     padding: 8%;
 }
 #fullstack-right span{
+    font-family: "Libre Franklin", sans-serif;
     color:white;
-    font-size: 2.2rem;
+    font-size: 2rem;
     line-height: 3.5rem;
 }
 .icon-parent{
     cursor: pointer;
-    background-color: transparent;
-    border: 2px solid rgb(196, 196, 196);
     width: 60px;
     height: 60px;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
 
     i{
-        color:rgb(196, 196, 196);
-        font-size: 1.3rem;
+        color:rgb(170, 170, 170);
+        font-size: 1.6rem;
+        &.selected{
+            color:white;
+            font-weight: bold;
+        }
     }
     &:hover{
         

@@ -6,8 +6,8 @@
     scroll-snap-align: start;
 
     h1, h6{
+        font-family: "Libre Franklin", sans-serif;
         margin: 1%;
-        color:rgb(209, 215, 231);
         font-weight: bold;
         text-shadow:
         -1px -1px 0 #2b2b38,  /* Sombra superior esquerda */
@@ -17,9 +17,11 @@
     }
     h1{
         font-size: 4.5rem;
+        color: white;
     }
     h6{
         font-size: 1.5rem;
+        color:rgb(131, 131, 131);
     }
     a{
         margin: 0;
@@ -52,7 +54,8 @@
     align-items: center;
     justify-content:center;
     box-sizing: border-box;
-    background: radial-gradient(circle, rgb(49, 49, 49) 0%, rgb(27, 27, 27) 98%, rgb(0, 0, 0) 100%);
+    background-color: black;
+    //background: radial-gradient(circle, rgb(49, 49, 49) 0%, rgb(27, 27, 27) 98%, rgb(0, 0, 0) 100%);
     padding: 2%;
     border-radius: 4px;
     -webkit-border-radius: 4px;

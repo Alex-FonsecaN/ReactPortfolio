@@ -1,75 +1,44 @@
-*{
-    
-}
+
 #contact-main{
-    background-color: black;
+    background-color: rgb(34, 34, 34);
     width: 100%;
     height: 100%;
     scroll-snap-align: start;
-    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:20px;
 }
 #contact-content{
-    height: 90%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.contents{
-    width: 100%;
     height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 0% 20% 0% 20%;
-    margin-bottom: 40px;
-    gap:100px;
-
-    a{
-        width: 300px;
-        background: none;
-        color: white;
-        cursor: pointer;
-        border: none;
-        font-size: 3rem;
-        text-decoration: none;
-        &:hover{
-            font-weight: bold;
-        }
-        span{
-            margin-left: 20px;
-            box-sizing: border-box;
-        }
-    }
-    div{
-        width: 300px;
-        background: none;
-        color: white;
-        border: none;
-        font-size: 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        i{
-            display: inline;
-        }
-        span{
-            margin-left: 20px;
-            box-sizing: border-box;
-        }
-    }
-}
-#footer-link{
-    height: 10%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap:20px;
+    a, div{
+        font-size: 37px;
+        color: rgb(214, 214, 214);
+        cursor: pointer;
+    }
+    i{
+        &:hover{
+            color:rgb(167, 165, 165);
+        }
+    }
+}
+.secondary-info{
+    color: rgb(94, 94, 94);
+    font-size: 0.8rem;
+}
+.footer-scroll{
+    font-family: "Libre Franklin", sans-serif;
     cursor: pointer;
-    font-size: 1.5rem;
+    color: rgb(214, 214, 214);
     &:hover{
         text-decoration: underline;
+
     }
 }
+
