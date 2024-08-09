@@ -20,9 +20,9 @@ function App() {
       <MainContextProvider>
         <Navbar />
         <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/tiktok" element={<TikTok />} />
-          <Route path='/game' element={<Game />} />
+          <Route path="/ReactPortfolio" element={<MainPage />} />
+          <Route path="/ReactPortfolio/tiktok" element={<TikTok />} />
+          <Route path='/ReactPortfolio/game' element={<Game />} />
         </Routes>
       </MainContextProvider>
     </Router>
